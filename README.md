@@ -9,4 +9,7 @@
 ### Completed Project
 <b>My-Pet-App-Completed</b>
 
-- The 'completed' project is the completed code to refer to if you run into any issues 
+- The 'completed' project is the completed code to refer to if you run into any issues
+
+<b>Screenshot</b>
+![alt text](completed-screenshot.png)
