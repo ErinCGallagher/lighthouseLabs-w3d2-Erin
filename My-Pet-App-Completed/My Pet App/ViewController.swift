@@ -55,7 +55,7 @@ extension ViewController: UITableViewDataSource {
         //get pet details at the associated row
         let petDetails = petList[indexPath.row]
         cell.petName.text = petDetails.name
-        cell.imageView?.image = petDetails.image
+        cell.petImage.image = petDetails.image
         
         return cell
     }
