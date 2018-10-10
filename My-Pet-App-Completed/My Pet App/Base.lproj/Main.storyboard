@@ -20,14 +20,54 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KbV-rf-BSF">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PetDetailsCell" rowHeight="277" id="QSy-e0-SDD" customClass="PetDetailsCell" customModule="My_Pet_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="277"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QSy-e0-SDD" id="xLy-Sd-5zL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="276.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xn0-Bs-qLk" userLabel="Pet Image">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="220"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="220" id="AIh-ne-0tv"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ExL-mL-44h" userLabel="Pet Label">
+                                                    <rect key="frame" x="15" y="230" width="345" height="46.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="vsg-gP-BAv"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xn0-Bs-qLk" firstAttribute="leading" secondItem="xLy-Sd-5zL" secondAttribute="leadingMargin" id="1SS-n0-R12"/>
+                                                <constraint firstItem="xn0-Bs-qLk" firstAttribute="top" secondItem="xLy-Sd-5zL" secondAttribute="top" id="CDh-H6-Stc"/>
+                                                <constraint firstItem="ExL-mL-44h" firstAttribute="top" secondItem="xn0-Bs-qLk" secondAttribute="bottom" constant="10" id="FT2-t4-aCK"/>
+                                                <constraint firstItem="xn0-Bs-qLk" firstAttribute="trailing" secondItem="xLy-Sd-5zL" secondAttribute="trailingMargin" id="Lf7-Yq-sg0"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ExL-mL-44h" secondAttribute="trailing" id="RaK-7U-HWF"/>
+                                                <constraint firstItem="ExL-mL-44h" firstAttribute="leading" secondItem="xLy-Sd-5zL" secondAttribute="leadingMargin" id="SKX-xr-sfH"/>
+                                                <constraint firstAttribute="bottom" secondItem="ExL-mL-44h" secondAttribute="bottom" id="e7C-oR-4oQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="petImage" destination="xn0-Bs-qLk" id="7Io-sZ-dvB"/>
+                                            <outlet property="petName" destination="ExL-mL-44h" id="dzl-h5-Jdy"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="KbV-rf-BSF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nng-fL-SST"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KbV-rf-BSF" secondAttribute="bottom" id="stg-iz-B4o"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KbV-rf-BSF" secondAttribute="trailing" id="ulc-SV-AyM"/>
-                            <constraint firstItem="KbV-rf-BSF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vxC-ds-fL9"/>
+                            <constraint firstItem="KbV-rf-BSF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="nng-fL-SST"/>
+                            <constraint firstAttribute="bottom" secondItem="KbV-rf-BSF" secondAttribute="bottom" id="stg-iz-B4o"/>
+                            <constraint firstAttribute="trailing" secondItem="KbV-rf-BSF" secondAttribute="trailing" id="ulc-SV-AyM"/>
+                            <constraint firstItem="KbV-rf-BSF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vxC-ds-fL9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

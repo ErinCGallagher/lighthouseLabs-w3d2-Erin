@@ -40,14 +40,24 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        //if pet list is nil, return 0 rows
+        guard let petList = petsData else { return 0 }
+        //else return the number of pets in petList
+        return petList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //if petsData list is nil, return an empty table view cell
-        guard let petsData = petsData else { return UITableViewCell() }
-        //TODO: Create custom cell
-        return UITableViewCell()
+        guard let petList = petsData else { return UITableViewCell() }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PetDetailsCell", for: indexPath) as! PetDetailsCell
+        
+        //get pet details at the associated row
+        let petDetails = petList[indexPath.row]
+        cell.petName.text = petDetails.name
+        cell.imageView?.image = petDetails.image
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
