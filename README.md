@@ -1,5 +1,7 @@
 # lighthouseLabs-w3d2-Erin
 
+Introduction to creating custom cells
+
 ### Start Project
 <b>My-Pet-App-Start</b>
 
